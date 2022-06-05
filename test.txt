@@ -1,0 +1,11 @@
+.get((req, res, next) =>{
+            const pipeline = [];
+            const agg = client.db("mandiDB").collection("reports").aggregate(pipeline);
+            pipeline = [
+                {
+                    $match: {
+                        cmdtyName
+                    }
+                }
+            ];
+        }
